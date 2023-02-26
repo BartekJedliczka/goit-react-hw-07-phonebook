@@ -1,16 +1,6 @@
-export const selectContacts = state => {
-  if (state === undefined) {
-    return;
-  }
-  return state.contacts;
-};
+export const selectContacts = state => state.contacts.items;
 
-export const selectFilter = state => {
-  if (state === undefined) {
-    return;
-  }
-  return state.filter;
-};
+export const selectFilter = state => state.filters.status;
 
 export const selectFilteredContacts = state => {
   return state.contacts.items.filter(contact =>
