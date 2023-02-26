@@ -40,7 +40,6 @@ export const contactsReducer = createSlice({
       const items = state.items.filter(
         contact => contact.id !== action.payload.id
       );
-      // state.items.splice(index, 1);
       state.items = items;
     },
     [deleteContact.rejected]: handleRejected,
