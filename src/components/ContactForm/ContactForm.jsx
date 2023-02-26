@@ -19,7 +19,7 @@ export const ContactForm = () => {
       number: number.value,
     };
 
-    if (contacts.some(contact => contact.name === name.value)) {
+    if (contacts.find(contact => contact.name === name.value)) {
       Report.warning(
         'Phonebook Warning',
         'The contact already exists with this name',
